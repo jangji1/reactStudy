@@ -1,4 +1,4 @@
-# ReactJS를 작성할 때에 알아두면 좋은 ES6 문법들
+# CH 1. ReactJS를 작성할 때에 알아두면 좋은 ES6 문법들
 
 
 ## 1. block scope
