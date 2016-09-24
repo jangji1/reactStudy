@@ -471,6 +471,7 @@ Java의 그것과 비슷하지만 private 메서드가 없다.
 > 이 챕터를 브라우저에서 확인하기 위한 준비사항
 
 ```cmd
+> npm i -g webpack  // (webpack을 처음 설치하는 경우)
 > git clone https://github.com/react-study/reactStudy [folderName]
 > cd [folderName]
 > cd 1_ES6
