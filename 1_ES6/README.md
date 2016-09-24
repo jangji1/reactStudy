@@ -471,12 +471,16 @@ Java의 그것과 비슷하지만 private 메서드가 없다.
 > 이 챕터를 브라우저에서 확인하기 위한 준비사항
 
 ```cmd
-> git clone https://github.com/react-study/boilerplate.git [folderName]
+> git clone https://github.com/react-study/reactStudy [folderName]
 > cd [folderName]
+> cd 1_ES6
 > npm i        // node_modules 설치
 > webpack      // bundle.js 번들링
 > webpack -w   // 파일 변경시마다 다시 bundle.js 번들링
 ```
+
+<< [folderName]에는 각자 원하는 폴더 이름을 넣어주세요. >>
+
 
 ### 1) without 'default' export
 
