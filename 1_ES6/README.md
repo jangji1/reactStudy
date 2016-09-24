@@ -492,14 +492,14 @@ export function square(x) {
 }
 
 //------ main.js ------
-import * as lib from 'lib';
+import * as lib from './lib';
 console.log(lib);             // (1)
 console.log(lib.square(5));   // (2)
 console.log(lib.sqrt(4));     // (3)
 
 /* or */
 
-import { square, sqrt } from 'lib';
+import { square, sqrt } from './lib';
 console.log(square(5));       // (4)
 console.log(sqrt(4));         // (5)
 ```
@@ -517,7 +517,7 @@ export function square(x) {
 }
 
 //------ main.js ------
-import * as lib from 'lib';
+import * as lib from './lib';
 console.log(lib.default());   // (1)
 console.log(lib.square(5));   // (2)
 console.log(lib.sqrt(4));     // (3)
