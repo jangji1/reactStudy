@@ -111,6 +111,7 @@ var                  | O        | X     |  O       | X
 function declaration | O        | △    |  O       | X
 
 > 함수선언문의 경우 sloppy-mode 모드에서는 block-scope의 영향을 받지 않고, strict-mode에서는 block-scope의 영향을 받는다.
+
 ```js
 (function(){
   {
