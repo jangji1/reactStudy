@@ -54,18 +54,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.14.0",
-    "babel-preset-es2015": "^6.14.0"
-  },
-  "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "babel-core": "6.13.0"
   }
 }
-```
-
-```bash
-> npm i
 ```
 
 표기                | 설명
@@ -83,6 +74,37 @@ version             | version 과 일치.
 version1 - version2 | &gt;= version1 &lt;= version2 과 같음.
 range1 || range2    | range1 또는 range2
 
+
+```bash
+> npm i
+> npm update
+```
+
+```js
+"devDependencies": {
+  "babel-core": "^6.13.0"
+}
+```
+
+```bash
+> npm update
+```
+
+
+```js
+"devDependencies": {
+  "babel-core": "^6.13.0",
+  "babel-preset-es2015": "^6.14.0"
+},
+"dependencies": {
+  "react": "^15.3.2",
+  "react-dom": "^15.3.2"
+}
+```
+
+```bash
+> npm i
+```
 
 
 ## 4. babel
@@ -130,8 +152,11 @@ console.log([1,2,3].map(n => n + 1));
 - [webpack module bundler](https://webpack.github.io/)
 - [javascript 모듈화도구 webpack](http://d2.naver.com/helloworld/0239818)
 - [초보자용 webpack 튜토리얼 part1](https://firejune.com/1798/%EC%B4%88%EB%B3%B4%EC%9E%90%EC%9A%A9+Webpack+%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC+%ED%8C%8C%ED%8A%B81+-+Webpack+%EC%9E%85%EB%AC%B8)
-- [Webpack의 혼란스런 사항들](https://github.com/FEDevelopers/tech.description/wiki/Webpack%EC%9D%98-%ED%98%BC%EB%9E%80%EC%8A%A4%EB%9F%B0-%EC%82%AC%ED%95%AD%EB%93%A4)
+- [Webpack - The Confusing Parts (원본)](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9#.zgbts1puu)
+- [Webpack의 혼란스런 사항들 (번역)](https://github.com/FEDevelopers/tech.description/wiki/Webpack%EC%9D%98-%ED%98%BC%EB%9E%80%EC%8A%A4%EB%9F%B0-%EC%82%AC%ED%95%AD%EB%93%A4)
 - [webpack configurations](https://webpack.github.io/docs/configuration.html)
+- [list of plugins](https://github.com/webpack/docs/wiki/list-of-plugins)
+- [입문자를 위한 Webpack 튜토리얼](https://github.com/arahansa/WebpackTutorial/tree/master/ko-arahansa)
 
 ```bash
 > npm i -g webpack
@@ -160,4 +185,15 @@ module.exports = {
     ]
   }
 }
+```
+
+```js
+//----- main.js -----
+const a = 1;
+const b = 2;
+console.log(`${a} + ${b} = ${a+b}`);
+```
+
+```bash
+> webpack
 ```
