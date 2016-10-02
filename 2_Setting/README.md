@@ -142,7 +142,7 @@ console.log([1,2,3].map(n => n + 1));
 ```
 
 ```bash
-> npm i babel-cli
+> npm i -g babel-cli
 > babel test.js
 > babel test.js -d bundle
 ```
