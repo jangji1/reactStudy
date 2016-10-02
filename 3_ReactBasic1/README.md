@@ -6,7 +6,9 @@
 
 
 
-## 1. easy way
+## 1. setting
+
+### 1-1. easy way
 
 ```html
 <!-- 1_helloworld.html -->
@@ -33,25 +35,24 @@
 
 
 
-## 2. with babel & webpacks (boilerplate 적용)
+### 1-2. with babel & webpack
 
 ```cmd
-> git clone https://github.com/react-study/boilerplate.git [folder-name]
+> git clone https://github.com/react-study/todo-app [folder-name]
 > cd [folder-name]
 > npm i
-
-// 이후 package.json의 name, discription 등 정보를 바꾸어준다.
+> git checkout -b [name]/03/01
 ```
 
 
 
-## 3. Component
+## 2. Component
 
 - class (React.Component를 상속하는 클래스)
 - render 메소드를 실행한 결과값(virtual dom)을 반환하는 역할.
 - render 메소드는 state, props가 바뀔 때마다 실행된다.
 
-### 3-1. original type : `React.CreateClass`
+### 2-1. original type : `React.CreateClass`
 ```js
 //----- Parent.js -----
 import React from 'react';
@@ -93,7 +94,7 @@ const Child = React.createClass({
 export default Child;
 ```
 
-### 3-2. es6 type : `class extends React.Component`
+### 2-2. es6 type : `class extends React.Component`
 
 ```js
 //----- Parent.js -----
@@ -137,7 +138,7 @@ export default Child;
 ```
 
 
-## 4. `ReactDOM.render(VirtualDOM, targetElement)`
+## 3. `ReactDOM.render(VirtualDOM, targetElement)`
 
 - VirtualDOM을 실제 html의 targetElement에 그려주는 역할.
 
@@ -153,7 +154,7 @@ ReactDOM.render(
 ```
 
 
-## 5. jsx 문법
+## 4. jsx 문법
 
 - [JSX 깊이보기](https://facebook.github.io/react/docs/jsx-in-depth-ko-KR.html)
 - nested Element : 최상단에는 반드시 하나의 엘리먼트만 존재해야 한다. 즉, 여러 형제요소들은 반드시 부모요소로 감싸야 한다.
@@ -222,7 +223,7 @@ const total = price * amount;
 ```
 
 
-## 6. props
+## 5. props
 
 컴포넌트 자신이 직접 변동에 관여하지 않고, 상위 컴포넌트 등에서 전송받아 활용하는 목적으로만 쓰이는 데이터. 어떤 값을 부모 컴포넌트에서 자식 컴포넌트에 전달하기 위한 수단.
 - parent 컴포넌트에 의해 값이 변경됨.
@@ -260,7 +261,7 @@ Child.defaultProps = {
 };
 ```
 
-## 7. state
+## 6. state
 
 컴포넌트 내부에서 값을 변경, 활용하기 위한 데이터. 클릭에 따른 토글상태값 기억 등 국소범위만을 위한 데이터에 유용.
 - parent 컴포넌트에 의해 값이 변경되지 않음.
@@ -294,7 +295,7 @@ class Parent extends React.Component {
 ```
 
 
-## 8. 부모/자식 component간의 통신
+## 7. 부모/자식 component간의 통신
 
 React의 data flow는 위에서 아래로 흐르는 일방통행이 원칙!
 
@@ -380,7 +381,7 @@ class Child extends React.Component {
 }
 ```
 
-## 9. refs
+## 8. refs
 - [refs에서 컴포넌트로](https://facebook.github.io/react/docs/more-about-refs-ko-KR.html)
 - state나 props로는 수행할 수 없는 DOM 제어 등을 위한 추가수단.
 - 가급적 '데이터흐름'과 무관한 경우에만 활용할 것.
@@ -411,6 +412,6 @@ class Parent extends React.Component {
 }
 ```
 
-## 10. react devtool
+## 9. react devtool
 
 [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
