@@ -158,6 +158,7 @@ console.log([1,2,3].map(n => n + 1));
 - [list of plugins](https://github.com/webpack/docs/wiki/list-of-plugins)
 - [입문자를 위한 Webpack 튜토리얼](https://github.com/arahansa/WebpackTutorial/tree/master/ko-arahansa)
 
+- [webpack dev tools](https://webpack.github.io/docs/configuration.html#devtool)
 ```bash
 > npm i -g webpack
 > npm i -D webpack babel-loader
