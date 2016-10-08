@@ -93,6 +93,7 @@ const people = this.state.people.map((v,i) => (
 
 #### 2-1-2. `getInitialState`
 - original : `getInitialState()` 메소드.
+
   ```js
   const Comp = React.createClass({
     getInitialState() {
@@ -103,7 +104,9 @@ const people = this.state.people.map((v,i) => (
     ...
   })
   ```
+
 - es6 : `constructor` 내에서 `this.state = {}`으로 직접 설정
+
   ```js
   class Comp extends React.Component {
     constructor() {
@@ -117,7 +120,9 @@ const people = this.state.people.map((v,i) => (
   ```
 
 #### 2-1-3. `getDefaultProps`
+
 - original : `getDefaultProps()` 메소드.
+
   ```js
   const Comp = React.createClass({
     getDefaultProps() {
@@ -128,8 +133,10 @@ const people = this.state.people.map((v,i) => (
     ...
   })
   ```
+
 - es6 : `static defaultProps = {}`으로 직접 설정
   constructor보다 위에 위치시킬 것을 추천. ([babel-preset-stage-2](http://babeljs.io/docs/plugins/transform-class-properties/) 이하 설치 필요)
+
   ```js
   class Comp extends React.Component {
     static defaultProps = {
@@ -139,7 +146,9 @@ const people = this.state.people.map((v,i) => (
     ...
   }
   ```
+
 - es6 : 또는 class 정의를 마친 다음에 별도로 설정 가능
+
   ```js
   class Comp extends React.Component {
     ...
@@ -150,9 +159,11 @@ const people = this.state.people.map((v,i) => (
   ```
 
 #### 2-1-4. `propTypes`
+
 [prop 검증](https://facebook.github.io/react/docs/reusable-components-ko-KR.html#prop-검증)
 
 - original : `propTypes: {}` 프로퍼티로 직접 지정
+
   ```js
   const Comp = React.createClass({
     propTypes: {
@@ -161,7 +172,9 @@ const people = this.state.people.map((v,i) => (
     ...
   })
   ```
+
 - es6 : `static propTypes: {}`으로 직접 지정
+
   ```js
   class Comp extends React.Component {
     static propTypes = {
@@ -171,7 +184,9 @@ const people = this.state.people.map((v,i) => (
     ...
   }
   ```
+
 - es6 : 또는 class 정의를 마친 다음에 별도로 설정 가능
+
   ```js
   class Comp extends React.Component {
     ...
@@ -182,7 +197,9 @@ const people = this.state.people.map((v,i) => (
   ```
 
 ### 2-2) Lifecycle Methods
+
 [생명주기 메소드](https://facebook.github.io/react/docs/component-specs-ko-KR.html#컴포넌트-명세)
+
 1. `componentWillMount()`
 2. `componentDidMount()`
 3. `componentWillReceiveProps(nextProps)`
@@ -280,6 +297,7 @@ class Parent extends React.Component {
 [Event Symstem](https://facebook.github.io/react/docs/events-ko-KR.html)
 
 ### 3-1) event attributes
+
 event | data Type
 :---  | :---
 bubbles | boolean
@@ -298,6 +316,7 @@ timeStamp | number
 type | string
 
 ### 3-2) event test
+
 ```js
 class Comp extends React.Component {
   handleClick(e) {
@@ -324,7 +343,9 @@ class Comp extends React.Component {
 ```
 
 ### 3-3) Supported Events
+
 [지원되는 이벤트](https://facebook.github.io/react/docs/events-ko-KR.html#지원되는-이벤트)
+
 category | eventName
 :--- | :---
 clipboard | `onCopy` `onCut` `onPaste`
