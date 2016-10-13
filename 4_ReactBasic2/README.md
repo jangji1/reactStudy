@@ -22,15 +22,15 @@ arr.forEach((v, i) => {
 ```js
 const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [
-  { name: 'a', id: 0 },
-  { name: 'b', id: 1 },
-  { name: 'c', id: 2 }
+  { name : 'a', id: 0 },
+  { name : 'b', id: 1 },
+  { name : 'c', id: 2 }
 ];
 
 const newArr1 = arr1.map((v,i) => v + 1);
 
 const newArr2 = arr2.map((v,i) => {
-  return { nameWithId: v.name + v.id }
+  return { nameWithId : v.name + v.id }
 });
 
 console.log(newArr1, newArr2);
@@ -68,11 +68,11 @@ console.log(res1, res2, res3, res4);
 //----- Parent.js -----
 const people = this.state.people.map((v,i) => (
   <Child
-    key={`person#${i}`}
-    name={v.name}
-    phone={v.phone}
-    show={v.show}
-    handleClick={() => this.handleClick(i)}
+    key         = {`person#${i}`}
+    name        = {v.name}
+    phone       = {v.phone}
+    show        = {v.show}
+    handleClick = {() => this.handleClick(i)}
   />
 ));
 ```
@@ -80,11 +80,34 @@ const people = this.state.people.map((v,i) => (
 ### 1-5) 더 간단하게
 
 - destructuring
+
+```js
+//----- Parent.js -----
+const people = this.state.people.map((v,i) => (
+  <Child
+    key         = {`person#${i}`}
+    handleClick = {() => this.handleClick(i)}
+    { ...v }
+  />
+));
+```
+
 - rest parameter
+
+```js
+//----- Parent.js -----
+const people = this.state.people.map(({ name, ...a },i) => (
+  <Child
+    key         = {`person#${i}`}
+    name        = {name}
+    handleClick = {() => this.handleClick(i)}
+    { ...a }
+  />
+));
+```
 
 
 ## 2. component specs & lifecycle
-
 
 ### 2-1) 컴포넌트 명세
 [컴포넌트 명세](https://facebook.github.io/react/docs/component-specs-ko-KR.html#컴포넌트-명세)
@@ -98,7 +121,7 @@ const people = this.state.people.map((v,i) => (
   const Comp = React.createClass({
     getInitialState() {
       return {
-        people: []
+        people : []
       }
     },
     ...
@@ -112,7 +135,7 @@ const people = this.state.people.map((v,i) => (
     constructor() {
       super();
       this.state = {
-        people: []
+        people : []
       };
     }
     ...
@@ -127,7 +150,7 @@ const people = this.state.people.map((v,i) => (
   const Comp = React.createClass({
     getDefaultProps() {
       return {
-        name: 'no name'
+        name : 'no name'
       };
     },
     ...
@@ -140,7 +163,7 @@ const people = this.state.people.map((v,i) => (
   ```js
   class Comp extends React.Component {
     static defaultProps = {
-      name: 'no name'
+      name : 'no name'
     }
     constructor(){ ... }
     ...
@@ -167,7 +190,7 @@ const people = this.state.people.map((v,i) => (
   ```js
   const Comp = React.createClass({
     propTypes: {
-      name: React.PropTypes.string.isRequired
+      name : React.PropTypes.string.isRequired
     }
     ...
   })
@@ -178,7 +201,7 @@ const people = this.state.people.map((v,i) => (
   ```js
   class Comp extends React.Component {
     static propTypes = {
-      name: React.PropTypes.string
+      name : React.PropTypes.string
     }
     constructor(){ ... }
     ...
@@ -192,7 +215,7 @@ const people = this.state.people.map((v,i) => (
     ...
   }
   Comp.propTypes = {
-    name: React.PropTypes.string
+    name : React.PropTypes.string
   }
   ```
 
