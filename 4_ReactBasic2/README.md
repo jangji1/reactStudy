@@ -231,6 +231,9 @@ const people = this.state.people.map(({ name, ...a },i) => (
 6. `componentDidUpdate(prevProps, prevState)`
 7. `componentWillUnmount()`
 
+![Component 생명주기](./component-life-cycle.png)
+
+
 ```js
 //----- Child.js -----
 class Child extends React.Component {
