@@ -1,10 +1,15 @@
 # Ch 5. Todo App 1
 
+
 ## 3. 라우터
 
 - [react-router](https://github.com/ReactTraining/react-router/tree/master/docs)
 - [route-matching](https://github.com/ReactTraining/react-router/blob/master/docs/guides/RouteMatching.md)
 - [react-router 4.0](https://react-router-website-xvufzcovng.now.sh/)
+
+```bash
+> npm i -S react-router
+```
 
 
 ### 3-1) `hashHistory` vs. `browserHistory`
