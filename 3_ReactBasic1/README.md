@@ -65,7 +65,9 @@ const Parent = React.createClass({
   }
 });
 export default Parent;
+```
 
+```js
 //----- Child.js -----
 import React from 'react';
 const Child = React.createClass({
@@ -108,7 +110,9 @@ class Parent extends React.Component {
   }
 }
 export default Parent;
+```
 
+```js
 //----- Child.js -----
 import React from 'react';
 class Child extends React.Component {
@@ -242,7 +246,9 @@ class Parent extends React.Component {
     )
   }
 }
+```
 
+```js
 //----- Child.js -----
 class Child extends React.Component {
   render() {
@@ -362,7 +368,9 @@ class Parent extends React.Component {
     );
   }
 }
+```
 
+```js
 //----- Child.js -----
 class Child extends React.Component {
   render() {
