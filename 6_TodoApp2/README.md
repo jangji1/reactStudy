@@ -56,9 +56,11 @@ https://github.com/mzabriskie/axios
 - 정상적으로 서버와 송수신이 이뤄질 것이라 믿고(긍정적으로!), 일단 업데이트.
 - 만의 하나 송수신이 제대로 이뤄지지 않을 경우 원상복구.
 
-### 2-2) Immutabe Helper : `react-addons-update`
+### 2-2) Immutabe Helper : `react-addons-update` => `immutability helper`
 
-[불변성 헬퍼들](https://facebook.github.io/react/docs/update-ko-KR.html)
+[불변성 헬퍼들](https://facebook.github.io/react/docs/update.html)
+
+[Immutability Helper](https://github.com/kolodny/immutability-helper)
 
 ```bash
 > npm i -S react-addons-update
