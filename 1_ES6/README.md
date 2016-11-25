@@ -377,14 +377,76 @@ function declaration | O        | △    |  O       | X
 ```
 
 
-## 8. template literals
+## 8. Destructuring Assignment
+
+배열 혹은 객체를 해체하여 각각 변수에 할당한다.
+
+#### 1) 배열
+
+```js
+const [ a, b, c ] = [ 1, 2, 3 ];
+console.log(a, b, c);        // (1)
+
+const [ a, [ b, [ , c ], ], d ] = [ 1, [ 2, [ 3, 4 ], 5 ], 6 ];
+console.log(a, b, c, d);     // (2)
+```
+
+
+#### 2) 객체
+
+```js
+const iu = {
+    name : '아이유',
+    age : 23,
+    gender : 'female'
+};
+
+const {
+  name: n,
+  age: a,
+  gender: g
+} = iu;
+console.log(n, a, g);    // (1)
+
+const {
+  name,
+  age,
+  gender
+} = iu;  // (2)
+```
+
+```js
+const {
+  name,
+  albums : {
+    regular,
+    irregular: {
+        '꽃갈피' : flower
+    }
+  }
+} = {
+  name : '아이유',
+  albums: {
+    'regular' : ['Growing up', 'Last Fantasy', 'Modern Times'],
+    'irregular': {
+        'Real' : 2013,
+        '꽃갈피' : 2015,
+        'CHAT_SHIRE' : 2016
+    }
+  }
+};
+console.log(name, regular, flower);    // (3)
+```
+
+
+## 9. template literals
 
 여러줄 문자열, 보간(표현식 삽입) 등을 지원하는 새로운 형태의 문자열.
 
 ```js
 console.log(`a
 bb
-ccc`);               // (1)
+ccc`);                 // (1)
 ```
 
 ```js
@@ -423,7 +485,7 @@ ccc`);               // (1)
 })();
 ```
 
-## 9. class
+## 10. class
 
 Java의 그것과 비슷하지만 private 메서드가 없다.
 
@@ -467,18 +529,18 @@ Java의 그것과 비슷하지만 private 메서드가 없다.
 ```
 
 
-## 10. module - import / export
+## 11. module - import / export
 
-> 이 챕터를 브라우저에서 확인하기 위한 준비사항
+이 챕터를 브라우저에서 확인하기 위한 준비사항
 
-```cmd
-> npm i -g webpack  // (webpack을 처음 설치하는 경우)
-> git clone https://github.com/react-study/reactStudy [folderName]
-> cd [folderName]
-> cd 1_ES6
-> npm i        // node_modules 설치
-> webpack      // bundle.js 번들링
-> webpack -w   // 파일 변경시마다 다시 bundle.js 번들링
+```bash
+$ npm i -g webpack  // (webpack을 처음 설치하는 경우)
+$ git clone https://github.com/react-study/reactStudy [folderName]
+$ cd [folderName]
+$ cd 1_ES6
+$ npm i        // node_modules 설치
+$ webpack      // bundle.js 번들링
+$ webpack -w   // 파일 변경시마다 다시 bundle.js 번들링
 ```
 
 << [folderName]에는 각자 원하는 폴더 이름을 넣어주세요. >>
