@@ -1,4 +1,4 @@
-# Ch 1. ReactJS를 작성할 때에 알아두면 좋은 ES6 문법들
+# Ch 2. ReactJS를 작성할 때에 알아두면 좋은 ES6 문법들
 
 ## 1. block scope
 
@@ -534,13 +534,11 @@ Java의 그것과 비슷하지만 private 메서드가 없다.
 이 챕터를 브라우저에서 확인하기 위한 준비사항
 
 ```bash
-$ npm i -g webpack  // (webpack을 처음 설치하는 경우)
-$ git clone https://github.com/react-study/reactStudy [folderName]
+$ [sudo] npm i -g webpack  // (webpack을 처음 설치하는 경우)
+$ git clone https://github.com/react-study/playground-2 [folderName]
 $ cd [folderName]
-$ cd 1_ES6
 $ npm i        // node_modules 설치
-$ webpack      // bundle.js 번들링
-$ webpack -w   // 파일 변경시마다 다시 bundle.js 번들링
+$ webpack -w   // 파일 변경 감지 및 bundling
 ```
 
 << [folderName]에는 각자 원하는 폴더 이름을 넣어주세요. >>

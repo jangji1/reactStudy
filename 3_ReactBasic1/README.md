@@ -2,7 +2,7 @@
 
 ## 0. Intro
 
-- [React and the Virtual DOM](https://youtu.be/BYbgopx44vo)
+- [React and the Virtual DOM](https://youtu.be/H24D0GveBYY)
 
 
 
@@ -38,12 +38,11 @@
 ### 1-2. with babel & webpack
 
 ```cmd
-> git clone https://github.com/react-study/todo-app [folder-name]
+> git clone https://github.com/react-study/playground-2 [folder-name]
 > cd [folder-name]
 > npm i
-> git checkout -b [name]/03/01
+> git checkout -b [english name]/03.01_test
 ```
-
 
 
 ## 2. Component
@@ -160,7 +159,7 @@ ReactDOM.render(
 
 ## 4. jsx 문법
 
-- [JSX 깊이보기](https://facebook.github.io/react/docs/jsx-in-depth-ko-KR.html)
+- [JSX 깊이보기](https://facebook.github.io/react/docs/jsx-in-depth.html)
 - nested Element : 최상단에는 반드시 하나의 엘리먼트만 존재해야 한다. 즉, 여러 형제요소들은 반드시 부모요소로 감싸야 한다.
 - 모든 태그는 닫는 태그가 존재해야 한다.
 - 모든 태그는 단일태그로도 표현이 가능하다. (ex. `<div></div>` === `<div />`)
@@ -390,7 +389,7 @@ class Child extends React.Component {
 ```
 
 ## 8. refs
-- [refs에서 컴포넌트로](https://facebook.github.io/react/docs/more-about-refs-ko-KR.html)
+- [refs에서 컴포넌트로](https://facebook.github.io/react/docs/refs-and-the-dom.html)
 - state나 props로는 수행할 수 없는 DOM 제어 등을 위한 추가수단.
 - 가급적 '데이터흐름'과 무관한 경우에만 활용할 것.
 - 기존에는 문자열로 지정하고 접근할 수 있었으나, 이제는 다음 방식만 유효함.

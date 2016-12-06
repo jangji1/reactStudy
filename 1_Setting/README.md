@@ -1,11 +1,12 @@
-# Ch 2. 개발환경세팅
+# Ch 1. 개발환경세팅
 
 ## 1. git
 
-- [sourceTree](https://www.sourcetreeapp.com/)
+- [(gui) sourceTree 설치](https://www.sourcetreeapp.com/)
 - [git 간편안내서](https://rogerdudler.github.io/git-guide/index.ko.html)
 - [직접 따라하며 git 브랜치 배우기](http://learnbranch.urigit.com/)
 - [Git 실습교육](http://www.slideshare.net/flyskykr/github-46014813)
+
 
 ## 2. node / npm
 
@@ -14,8 +15,7 @@
 ```bash
 > node -v
 > npm -v
-> [sudo] npm i -g npm
-> [sudo] npm i -g webpack
+> [sudo] npm i -g npm webpack babel-core
 ```
 
 ## 3. package.json
@@ -142,7 +142,7 @@ console.log([1,2,3].map(n => n + 1));
 ```
 
 ```bash
-> npm i -g babel-cli
+> [sudo] npm i -g babel-cli
 > babel test.js
 > babel test.js -d bundle
 ```
@@ -159,16 +159,15 @@ console.log([1,2,3].map(n => n + 1));
 - [입문자를 위한 Webpack 튜토리얼](https://github.com/arahansa/WebpackTutorial/tree/master/ko-arahansa)
 
 - [webpack dev tools](https://webpack.github.io/docs/configuration.html#devtool)
+
 ```bash
-> npm i -g webpack
+> [sudo] npm i -g webpack
 > npm i -D webpack babel-loader
 ```
 
 ```js
 //----- webpack.config.js -----
 module.exports = {
-  watch: true,                        // 파일감시여부
-  progress: true,                     // 번들링진행경과표시여부
   devtool: 'eval',                    // 개발용 디버깅 기능
   entry: './main.js',                 // 진입파일
   output: {                           // 결과파일

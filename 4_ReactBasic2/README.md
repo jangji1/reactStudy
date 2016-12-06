@@ -110,7 +110,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
 ## 2. component specs & lifecycle
 
 ### 2-1) 컴포넌트 명세
-[컴포넌트 명세](https://facebook.github.io/react/docs/component-specs-ko-KR.html#컴포넌트-명세)
+[컴포넌트 명세](https://facebook.github.io/react/docs/react-component.html#overview)
 
 #### 2-1-1. `render`: 필수요소.
 
@@ -158,7 +158,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
   ```
 
 - es6 : `static defaultProps = {}`으로 직접 설정
-  constructor보다 위에 위치시킬 것을 추천. ([babel-preset-stage-2](http://babeljs.io/docs/plugins/transform-class-properties/) 이하 설치 필요)
+  constructor보다 위에 위치시킬 것을 추천. ([babel-preset-stage-2 : Class properties transform](http://babeljs.io/docs/plugins/transform-class-properties/) 이하 설치 필요)
 
   ```js
   class Comp extends React.Component {
@@ -183,7 +183,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
 
 #### 2-1-4. `propTypes`
 
-[prop 검증](https://facebook.github.io/react/docs/reusable-components-ko-KR.html#prop-검증)
+[타입체크](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)
 
 - original : `propTypes: {}` 프로퍼티로 직접 지정
 
@@ -221,7 +221,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
 
 ### 2-2) Lifecycle Methods
 
-[생명주기 메소드](https://facebook.github.io/react/docs/component-specs-ko-KR.html#컴포넌트-명세)
+[생명주기 메소드](https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle)
 
 1. `componentWillMount()`
 2. `componentDidMount()`
@@ -320,7 +320,7 @@ class Parent extends React.Component {
 
 ## 3. event handling
 
-[Event Symstem](https://facebook.github.io/react/docs/events-ko-KR.html)
+[Event Symstem](https://facebook.github.io/react/docs/events.html)
 
 ### 3-1) event attributes
 
@@ -370,7 +370,7 @@ class Comp extends React.Component {
 
 ### 3-3) Supported Events
 
-[지원되는 이벤트](https://facebook.github.io/react/docs/events-ko-KR.html#지원되는-이벤트)
+[지원되는 이벤트](https://facebook.github.io/react/docs/events.html#supported-events)
 
 category | eventName
 :--- | :---
@@ -390,7 +390,7 @@ image | `onLoad` `onError`
 
 ## 4. stateless component
 
-[상태를 가지지 않는 함수](https://facebook.github.io/react/docs/reusable-components-ko-KR.html#상태를-가지지-않는-함수)
+[상태를 가지지 않는 함수](https://facebook.github.io/react/docs/components-and-props.html#functional-and-class-components)
 
 ```js
 //----- Child.js -----
