@@ -13,32 +13,51 @@
 - [nodejs](https://nodejs.org/ko/)
 
 ```bash
-> node -v
-> npm -v
-> [sudo] npm i -g npm webpack babel-core
+$ node -v
+$ npm -v
+$ [sudo] npm i -g npm webpack babel-core
 ```
+
+- [yarn](https://yarnpkg.com/)
+
+```bash
+$ [sudo] npm i -g yarn
+```
+
 
 ## 3. package.json
 
 - [모두 알지만 모두 모르는 package.json](http://programmingsummaries.tistory.com/385)
 
 ```bash
-> mkdir [folderName] && cd [folderName]
-> npm init -y
+$ mkdir [folderName] && cd [folderName]
 
-> npm i jquery       ( i  === install )
-> npm i -S jquery    ( -S === --save )
-> npm i -D jquery    ( -D === --save-dev )
+$ npm init -y
+// yarn init -y
 
-> npm un jquery      ( un === uninstall )
-> npm un -S jquery
-> npm un -D jquery
+$ npm i jquery       ( i  === install )
 
-> npm i -S react react-dom
-> npm i -D babel babel-{cli,core,loader,preset-{react,stage-1}}
+$ npm i -S jquery    ( -S === --save )
+// yarn add jquery
 
-> npm un -S react react-dom
-> npm un -D babel babel-{cli,core,loader,preset-{react,stage-1}}
+$ npm i -D jquery    ( -D === --save-dev )
+// yarn add jquery -D
+
+$ npm un jquery      ( un === uninstall )
+
+$ npm un -S jquery
+$ npm un -D jquery
+
+$ npm i -S react react-dom
+$ npm i -D react react-dom babel-core
+
+$ npm un -S react react-dom
+$ npm un -D react react-dom babel-core
+
+$ yarn add jquery
+$ yarn add react react-dom
+$ yarn add react react-dom babel-core -D
+$ yarn remove react react-dom babel-core
 ```
 
 ```js
@@ -77,7 +96,10 @@ range1 || range2    | range1 또는 range2
 
 ```bash
 > npm i
+// yarn i
+
 > npm update
+// yarn upgrade
 ```
 
 ```js
