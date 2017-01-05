@@ -79,7 +79,7 @@ const people = this.state.people.map((v,i) => (
 
 ### 1-5) 더 간단하게
 
-- destructuring
+- spread operator
 
 ```js
 //----- Parent.js -----
@@ -92,7 +92,7 @@ const people = this.state.people.map((v,i) => (
 ));
 ```
 
-- rest parameter
+- rest parameter + spread operator
 
 ```js
 //----- Parent.js -----
@@ -272,6 +272,7 @@ class Child extends React.Component {
   render() {
     const toggleColor = this.state.toggleColor;
     const list = this.props.list.map((v, i) => <li key={i}>{v}</li>);
+    console.log('!!! RENDER !!!');
     return (
       <div>
         <ul style={{
@@ -320,7 +321,7 @@ class Parent extends React.Component {
 
 ## 3. event handling
 
-[Event Symstem](https://facebook.github.io/react/docs/events.html)
+[Event System](https://facebook.github.io/react/docs/events.html)
 
 ### 3-1) event attributes
 
@@ -346,25 +347,33 @@ type | string
 ```js
 class Comp extends React.Component {
   handleClick(e) {
-    console.dir(e);
-    console.dir(e.nativeEvent);
-    console.log('bubbles :', e.bubbles);
-    console.log('cancelable :', e.cancelable);
-    console.log('defaultPrevented :', e.defaultPrevented);
-    console.log('isPropagationStopped :', e.isPropagationStopped());
-    console.log('eventPhase :', e.eventPhase);
-    console.log('isTrusted :', e.isTrusted);
-    console.log('target :', e.target);
-    console.log('timeStamp :', e.timeStamp);
-    console.log('type :', e.type);
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('defaultPrevented :', e.defaultPrevented);
-    console.log('isPropagationStopped :', e.isPropagationStopped());
-  }
-  render() {
-    <div onClick={this.handleClick.bind(this)} />
-  }
+     console.dir(e);
+     console.dir(e.nativeEvent);
+     console.log('bubbles :', e.bubbles);
+     console.log('cancelable :', e.cancelable);
+     console.log('defaultPrevented :', e.defaultPrevented);
+     console.log('isDefaultPrevented :', e.isDefaultPrevented());
+     console.log('isPropagationStopped :', e.isPropagationStopped());
+     console.log('eventPhase :', e.eventPhase);
+     console.log('isTrusted :', e.isTrusted);
+     console.log('target :', e.target);
+     console.log('timeStamp :', e.timeStamp);
+     console.log('type :', e.type);
+     e.preventDefault();
+     e.stopPropagation();
+     console.log('defaultPrevented :', e.defaultPrevented);
+     console.log('isDefaultPrevented :', e.isDefaultPrevented());
+     console.log('isPropagationStopped :', e.isPropagationStopped());
+   }
+   render() {
+     return <div onClick={this.handleClick.bind(this)}
+       style={{
+         width: 100,
+         height: 100,
+         border: '1px solid #000'
+       }}
+     />
+   }
 }
 ```
 
