@@ -41,10 +41,6 @@
       - Todo.js     : \<editTodo>, \<saveTodo>, \<cancelEditTodo>, \<deleteTodo>, \<toggleTodo>, \<deleteCompleted>
     - Footer.js   : counter, \<selectFilter>
 
-### 1-4) 고민거리
-
-- todo list data는 최초에 state? props?
-- toggleAll, deleteCompleted 처리는?
 
 ## 2. 작성
 

@@ -2,7 +2,7 @@
 
 ## 0. Intro
 
-- [React and the Virtual DOM](https://youtu.be/H24D0GveBYY)
+- [React and the Virtual DOM](https://youtu.be/muc2ZF0QIO4)
 
 
 

@@ -157,19 +157,6 @@ const people = this.state.people.map(({ name, ...a },i) => (
   })
   ```
 
-- es6 : `static defaultProps = {}`으로 직접 설정
-  constructor보다 위에 위치시킬 것을 추천. ([babel-preset-stage-2 : Class properties transform](http://babeljs.io/docs/plugins/transform-class-properties/) 이하 설치 필요)
-
-  ```js
-  class Comp extends React.Component {
-    static defaultProps = {
-      name : 'no name'
-    }
-    constructor(){ ... }
-    ...
-  }
-  ```
-
 - es6 : 또는 class 정의를 마친 다음에 별도로 설정 가능
 
   ```js
@@ -180,6 +167,20 @@ const people = this.state.people.map(({ name, ...a },i) => (
     name: 'no name'
   };
   ```
+
+  - es proposal : `static defaultProps = {}`으로 직접 설정
+    constructor보다 위에 위치시킬 것을 추천. ([babel-preset-stage-2 : Class properties transform](http://babeljs.io/docs/plugins/transform-class-properties/) 이하 설치 필요)
+
+    ```js
+    class Comp extends React.Component {
+      static defaultProps = {
+        name : 'no name'
+      }
+      constructor(){ ... }
+      ...
+    }
+    ```
+
 
 #### 2-1-4. `propTypes`
 
@@ -196,7 +197,18 @@ const people = this.state.people.map(({ name, ...a },i) => (
   })
   ```
 
-- es6 : `static propTypes: {}`으로 직접 지정
+- es6 : 또는 class 정의를 마친 다음에 별도로 설정 가능
+
+  ```js
+  class Comp extends React.Component {
+    ...
+  }
+  Comp.propTypes = {
+    name : React.PropTypes.string
+  }
+  ```
+
+- es proposal : `static propTypes: {}`으로 직접 지정
 
   ```js
   class Comp extends React.Component {
@@ -208,16 +220,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
   }
   ```
 
-- es6 : 또는 class 정의를 마친 다음에 별도로 설정 가능
 
-  ```js
-  class Comp extends React.Component {
-    ...
-  }
-  Comp.propTypes = {
-    name : React.PropTypes.string
-  }
-  ```
 
 ### 2-2) Lifecycle Methods
 
@@ -272,7 +275,7 @@ class Child extends React.Component {
   render() {
     const toggleColor = this.state.toggleColor;
     const list = this.props.list.map((v, i) => <li key={i}>{v}</li>);
-    console.log('!!! RENDER !!!');
+    console.log('[[ 렌더 메소드가 호출되었습니다. ]]');
     return (
       <div>
         <ul style={{
