@@ -305,7 +305,7 @@ obj.printName();               // (2)
 ```
 
 
-### 7-4. `Object.assign` (ES5)
+### 7-4. `Object.assign` (ES6)
 [Object.assign()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 객체의 얕은복사를 수행한다.
 
