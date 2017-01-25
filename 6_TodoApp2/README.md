@@ -9,11 +9,8 @@ node DB API로 실제 데이터를 적용해보자.
 #### mac
 
 - http://brew.sh/index_ko.html 에서 'Homebrew 설치하기' 아래의 내용을 복사하여 터미널에 붙여넣기.
-
-```bash
-$ brew install mongodb
-$ brew update
-```
+- brew install mongodb
+- brew update
 
 #### win
 
