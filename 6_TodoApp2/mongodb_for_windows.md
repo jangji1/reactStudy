@@ -61,7 +61,7 @@ msiexec.exe /q /i mongodb-win32-x86_64-2008plus-ssl-3.4.1-signed.msi ^ INSTALLLO
 예를 들어 오직 MongoDB 유틸리티만을 설치하기 위해서는 다음처럼 하시면 됩니다.
 
 ```bash
-Copymsiexec.exe /q /i mongodb-win32-x86_64-2008plus-ssl-3.4.1-signed.msi ^ INSTALLLOCATION="C:\Program Files\MongoDB\Server\3.4.1\" ^ ADDLOCAL="MonitoringTools,ImportExportTools,MiscellaneousTools"
+msiexec.exe /q /i mongodb-win32-x86_64-2008plus-ssl-3.4.1-signed.msi ^ INSTALLLOCATION="C:\Program Files\MongoDB\Server\3.4.1\" ^ ADDLOCAL="MonitoringTools,ImportExportTools,MiscellaneousTools"
 ```
 
 

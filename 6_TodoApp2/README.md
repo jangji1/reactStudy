@@ -82,5 +82,5 @@ https://github.com/mzabriskie/axios
 [Immutability Helper](https://github.com/kolodny/immutability-helper)
 
 ```bash
-> npm i -S react-addons-update
+> npm i -S immutability-helper
 ```
