@@ -58,7 +58,8 @@
 
 ### 2-3) 토글 기능 (active <-> completed)
 
-- classnames
+- [classnames](https://github.com/JedWatson/classnames)
+
 - toggleTodo
 - toggleAll
 - deleteCompleted
