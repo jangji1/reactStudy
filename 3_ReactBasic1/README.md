@@ -116,6 +116,7 @@ export default Parent;
 import React from 'react';
 class Child extends React.Component {
   constructor() {
+    super();
     this.state = {
       isToggle: false
     }
