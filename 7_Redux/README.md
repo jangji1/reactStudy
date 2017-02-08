@@ -44,6 +44,9 @@ https://dobbit.github.io/redux/
 http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components
 https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5i4yjbprz
 
+
+![How React-redux Works](./how-redux-works.png)
+
 ### 7-3-2. 구조
 
 변경전
