@@ -38,11 +38,14 @@
 ### 1-2. with babel & webpack
 
 ```cmd
-> git clone https://github.com/react-study/playground-2 [folder-name]
+> git clone https://github.com/react-study/playground-# [folder-name] // (#에는 기수 입력)
 > cd [folder-name]
 > npm i
 > git checkout -b [english name]/03.01_test
 ```
+
+<< [folderName]에는 각자 원하는 폴더 이름을 넣어주세요. >>
+
 
 
 ## 2. Component

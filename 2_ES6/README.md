@@ -484,7 +484,7 @@ Employee.logNames([park, jung]);    // (3)
 
 ```bash
 $ [sudo] npm i -g webpack  // (webpack을 처음 설치하는 경우)
-$ git clone https://github.com/react-study/playground-2 [folderName]
+$ git clone https://github.com/react-study/playground-# [folderName] // (#에는 기수 입력)
 $ cd [folderName]
 $ npm i        // node_modules 설치
 $ webpack -w   // 파일 변경 감지 및 bundling
