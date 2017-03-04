@@ -15,7 +15,7 @@ node DB API로 실제 데이터를 적용해보자.
 #### win
 
 - install : https://www.mongodb.com/download-center#community
-- 설치 후 세팅 필요 : http://cyberx.tistory.com/76 `윈도우에 설치하기` 참조.
+- 설치 후 세팅 필요 : [환경변수세팅](./mongodb_for_windows.md)
 
 
 
