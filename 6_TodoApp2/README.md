@@ -21,15 +21,12 @@ node DB API로 실제 데이터를 적용해보자.
 
 ### 1-2) deployd
 
-#### mac
-
 ```bash
 > [sudo] npm i -g deployd
 ```
 
-#### win
-
 http://deployd.com/
+
 
 #### trouble shooting
 
