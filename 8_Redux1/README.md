@@ -1,29 +1,6 @@
-# Ch 7. Redux 1
+# Ch 8. Redux 1
 
-## 7-1. 개요
-리액트로 금전출납부를 만들어보세요.
-인풋창에 숫자를 입력하고 '입금' '출금'버튼을 누르면 각각 입/출금 현황 및 잔액이 표시되는 테이블을 구성하시면 되겠습니다. 디자인 필요없이 기능만 구현되면 되고, 서버에 저장하실 필요는 없습니다.
-
-[ 숫자를 입력하세요(인풋) ] [입금(버튼)] [출금(버튼)]
-
-| 입금 | 출금 | 잔액 |
-| --- | --- | --- |
-| 5000 | | 5000 |
-| | 3000 | 2000 |
-
-(기본방식으로 작성 후 리덕스로 전환한다).
-
-
-## 7-2. 기본방식
-
-```
-- main
-- App
-  - InputBox     : input, buttons
-  - AccountBook  : data table
-```
-
-## 7-3. Redux
+### 1) 개요
 
 https://dobbit.github.io/redux/
 
@@ -36,13 +13,10 @@ https://dobbit.github.io/redux/
 > 이게 다입니다!
 
 
-### 7-3-1. Presentational component vs. Container component
+### 2) Presentational component vs. Container component
 
-기존 : https://dobbit.github.io/redux/basics/UsageWithReact.html#영민한smart-컴포넌트와-우직한dumb-컴포넌트
-
-현재 :
-http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components
-https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5i4yjbprz
+- [프리젠테이셔널 vs. 컨테이너 컴포넌트](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)
+- [영민한 vs. 우둔한 컴포넌트 - 제작자의 실수 인정](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5i4yjbprz)
 
 
 | | Presentational Components	| Container Components |
@@ -56,9 +30,9 @@ https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5i4yjbpr
 
 ![How React-redux Works](./how-redux-works.png)
 
-### 7-3-2. 구조
+### 3) 구조
 
-변경전
+> 변경전
 
 ```
 - main
@@ -67,7 +41,7 @@ https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5i4yjbpr
   - AccountBook  : data table
 ```
 
-변경후
+> 변경후
 
 ```
 - main
@@ -83,10 +57,10 @@ https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5i4yjbpr
   - BankReducer
 ```
 
-### 7-3-3. 설치
+### 4) 설치
 
 ```bash
 > npm i -S redux react-redux
 ```
 
-### 7-3-4. 기능추가
+### 5) Redux DevTool

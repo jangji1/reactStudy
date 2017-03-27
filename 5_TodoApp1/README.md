@@ -1,4 +1,4 @@
-# Ch 5. Todo App 1
+# Ch 5. Todo App 1 - 로컬 앱 제작
 
 ## 1. 분석 및 기획
 
@@ -56,9 +56,8 @@
 - saveTodo
 - cancelEditTodo
 
-### 2-3) 토글 기능 (active <-> completed)
 
-- [classnames](https://github.com/JedWatson/classnames)
+### 2-3) 토글 기능 (active <-> completed)
 
 - toggleTodo
 - toggleAll
@@ -66,61 +65,6 @@
 
 ### 2-4) 필터 기능
 
+- [classnames](https://github.com/JedWatson/classnames)
 - selectFilter
 - filterView
-
-
-## 3. 라우터
-
-- [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
-
-```bash
-> npm i -S react-router-dom
-```
-
-
-### 3-1) `hashHistory` vs. `browserHistory`
-- `hashHistory`
-  - url 중 hash 영역(`#`의 뒷부분)의 변화를 감지하여 routing.
-  - server-side setting 불필요
-  - IE10 미만에서도 동작
-- `browserHistory` (pushState, replaceState)
-  - [브라우저 히스토리 조작하기](https://developer.mozilla.org/ko/docs/Web/API/History_API)
-  - server-side setting 필요
-  - IE10 미만 미지원
-
-### 3-2) 기본 구조
-
-```js
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Redirect, Switch, Link } from 'react-router-dom';
-import { Home, About, Name, Portfolio } from './Components';
-
-render(
-  <Router>
-    <div>
-      <header>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/about/name">About - Name</Link></li>
-          <li><Link to="/about/redirect">About - RedirectTo: Portfolio #1</Link></li>
-          <li><Link to="/portfolio">Portfolio - All</Link></li>
-          <li><Link to="/portfolio/0">Portfoilo - #0</Link></li>
-          <li><Link to="/portfolio/1">Portfoilo - #1</Link></li>
-        </ul>
-      </header>
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/about/name" component={Name} />
-      <Switch>
-        <Redirect from="/about/redirect" to="/portfolio/1" />
-      </Switch>
-      <Route exact path="/portfolio" component={Portfolio} />
-      <Route path="/portfolio/:id" component={Portfolio} />
-    </div>
-  </Router>
-  , document.getElementById('root')
-);
-```

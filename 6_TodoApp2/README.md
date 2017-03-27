@@ -1,6 +1,9 @@
-# Ch 6. todo App 2
+# Ch 6. todo App 2 - ajax 통신
 
-node DB API로 실제 데이터를 적용해보자.
+로컬 환경에서 DB를 구축하고, ajax를 통해 서버와 통신하면서 진짜 동작하는 app을 만들어 봅시다.
+
+이하에서는 mongoDB와 deployd를 설치하는데, 여러분이 실제로 mongoDB를 조작할 일은 없습니다.
+deployd가 mongoDB를 기반으로 동작하기 때문에 설치하는 것입니다.
 
 ## 1. 설치
 
@@ -66,11 +69,7 @@ https://github.com/mzabriskie/axios
 
 ## 2. 성능 최적화
 
-### 2-1) 낙관적 업데이트
-
-- 정상적으로 서버와 송수신이 이뤄질 것이라 믿고(긍정적으로!), 일단 업데이트.
-- 만의 하나 송수신이 제대로 이뤄지지 않을 경우 원상복구.
-
+### 2-1) shouldComponentUpdate와 불변객체
 
 ### 2-2) Immutabe Helper : `react-addons-update` => `immutability helper`
 
@@ -81,3 +80,8 @@ https://github.com/mzabriskie/axios
 ```bash
 > npm i -S immutability-helper
 ```
+
+### 2-3) 낙관적 업데이트
+
+- 정상적으로 서버와 송수신이 이뤄질 것이라 믿고(긍정적으로!), 일단 업데이트.
+- 만의 하나 송수신이 제대로 이뤄지지 않을 경우 원상복구.
