@@ -2,15 +2,16 @@
 
 ReactJS를 실습하기 위한 공간입니다.
 
+---
 
-### 1. Details
+## 1. Details
 
 - 장소 : [청년공간 이음](http://i-eum.net/)
 - 교재 : 없음
 - 준비물 : 노트북
 
 
-### 2. Curriculum
+## 2. Curriculum
 
 #### 1) [개발환경세팅](./01_Setting/README.md)
 - git
@@ -66,7 +67,7 @@ ReactJS를 실습하기 위한 공간입니다.
 - todo App을 redux 체계로 전환
 
 
-### 3. Members
+## 3. Members
 
 #### 5기
 
