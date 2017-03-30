@@ -78,20 +78,20 @@ $ yarn remove react react-dom babel-core
 }
 ```
 
-표기                | 설명
-:---                | :---
-version             | version 과 일치.
-&gt;version         |
-&gt;=version        |
-&lt;version         |
-&lt;=version        |
-~version            | version 과 근사한 버전.
-^version            | version 과 호환되는 것.
-1.2.x               | 1.2.0, 1.2.1, 등등. 1.3.0은 제외
-*                   | 모든 버전
-""                  | * 와 같음
-version1 - version2 | &gt;= version1 &lt;= version2 과 같음.
-range1 || range2    | range1 또는 range2
+| 표기                | 설명
+| :---                | :---
+| version             | version 과 일치.
+| &gt;version         |
+| &gt;=version        |
+| &lt;version         |
+| &lt;=version        |
+| ~version            | version 과 근사한 버전.
+| ^version            | version 과 호환되는 것.
+| 1.2.x               | 1.2.0, 1.2.1, 등등. 1.3.0은 제외
+| *                   | 모든 버전
+| ""                  | * 와 같음
+| version1 - version2 | &gt;= version1 &lt;= version2 과 같음.
+| `range1 || range2`  | range1 또는 range2
 
 
 ```bash
