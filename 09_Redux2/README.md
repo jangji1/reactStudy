@@ -3,10 +3,10 @@
 ### 1) combineReducers
 - [combineReducers](http://redux.js.org/docs/api/combineReducers.html)
 
-
 ### 2) Middleware
 - [Middleware](http://redux.js.org/docs/advanced/Middleware.html)
   - http://redux.js.org/docs/advanced/Middleware.html#seven-examples
+  - https://github.com/evgenyrodionov/redux-logger
 
 ### 3) Asynchronous Action Handling
 
