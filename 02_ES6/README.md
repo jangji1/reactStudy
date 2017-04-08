@@ -449,18 +449,13 @@ class Person {
   toString() {
     return `${this.name}, ${this.age}세`;
   }
-  static logNames(persons) {
-    for (const person of persons) {
+  static logNames(...persons) {
+    for(const person of persons) {
       console.log(person.name, person.age);
     }
   }
 }
 class Employee extends Person {
-  static logNames(persons) {
-    for (const person of persons) {
-      console.log(person.name, person.age, person.title);
-    }
-  }
   constructor(name, age, title) {
     super(name, age);
     this.title = title;
@@ -468,15 +463,73 @@ class Employee extends Person {
   toString() {
     return `${super.toString()}, (${this.title})`;
   }
+  static logNames(...persons) {
+    for(const person of persons) {
+      console.log(person.name, person.age, person.title);
+    }
+  }
 }
 const park = new Employee('Park', 35, 'CTO');
 const jung = new Employee('Jung', 30, 'CEO');
 
 console.log(park.toString());       // (1)
-Person.logNames([park, jung]);      // (2)
-Employee.logNames([park, jung]);    // (3)
+Person.logNames(park, jung);      // (2)
+Employee.logNames(park, jung);    // (3)
 ```
 
+ - (ES5)
+
+```js
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+Person.prototype.toString = function() {
+  return this.name + ', ' + this.age + '세';
+}
+Person.logNames = function() {
+  var persons = Array.prototype.slice.apply(arguments);
+  persons.forEach(function(person) {
+    console.log(person.name, person.age);
+  });
+}
+
+function Employee(name, age, title) {
+  this.name = name;
+  this.age = age;
+  this.title = title;
+}
+Employee.prototype.toString = function() {
+  return this.super_toString() + ', ' + this.title;
+}
+Employee.logNames = function() {
+  var persons = Array.prototype.slice.apply(arguments);
+  persons.forEach(function(person) {
+    console.log(person.name, person.age, person.title);
+  });
+}
+
+var inherit = (function() {
+  function F(){ }
+  return function(C, P) {
+    F.prototype = P.prototype;
+    C.prototype = new F();
+    C.constructor.prototype = C;
+    C.superClass = P.prototype;
+    for(var static in P) {
+      C['super_' + static] = P[static];
+    }
+  }
+})();
+
+inherit(Employee, Person);
+var park = new Employee('Park', 35, 'CTO');
+var jung = new Employee('Jung', 30, 'CEO');
+
+console.log(park.toString());     // (1)
+Person.logNames(park, jung);      // (2)
+Employee.logNames(park, jung);    // (3)
+```
 
 ## 11. module - import / export
 
