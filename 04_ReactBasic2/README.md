@@ -110,11 +110,13 @@ const people = this.state.people.map(({ name, ...a },i) => (
 ## 2. component specs & lifecycle
 
 ### 2-1) 컴포넌트 명세
+
 [컴포넌트 명세](https://facebook.github.io/react/docs/react-component.html#overview)
 
 #### 2-1-1. `render`: 필수요소.
 
 #### 2-1-2. `getInitialState`
+
 - original : `getInitialState()` 메소드.
 
   ```js
@@ -186,9 +188,14 @@ const people = this.state.people.map(({ name, ...a },i) => (
 
 [타입체크](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)
 
+```bash
+> npm i -S prop-types
+```
+
 - original : `propTypes: {}` 프로퍼티로 직접 지정
 
   ```js
+  import PropTypes from 'prop-types'
   const Comp = React.createClass({
     propTypes: {
       name : React.PropTypes.string.isRequired
@@ -200,6 +207,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
 - es6 : 또는 class 정의를 마친 다음에 별도로 설정 가능
 
   ```js
+  import PropTypes from 'prop-types'
   class Comp extends React.Component {
     ...
   }
@@ -211,6 +219,7 @@ const people = this.state.people.map(({ name, ...a },i) => (
 - es proposal : `static propTypes: {}`으로 직접 지정
 
   ```js
+  import PropTypes from 'prop-types'
   class Comp extends React.Component {
     static propTypes = {
       name : React.PropTypes.string
