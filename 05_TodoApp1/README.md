@@ -50,6 +50,19 @@
 - addTodo
 - deleteTodo
 
+
+### 2-1-1) callback 호출과 this 바인딩
+
+##### (1) constructor에서 바인딩
+
+##### (2) jsx 내부에서 바인딩
+
+##### (3) jsx 내부에서 arrow function 활용
+
+##### (4) class property 기능(es proposal) - arrow function 사용
+
+
+
 ### 2-2) 수정 기능
 
 - editTodo
