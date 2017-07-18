@@ -2,8 +2,11 @@
 
 ## 1. git
 
-- [git 설치](https://git-scm.com/)
-- [(gui) sourceTree 설치](https://www.sourcetreeapp.com/)
+**git 설치**
+- 필수(win) : [git 설치](https://git-scm.com/)
+- 선택 : [(gui) sourceTree 설치](https://www.sourcetreeapp.com/)
+
+**git 학습**
 - [git 간편안내서](https://rogerdudler.github.io/git-guide/index.ko.html)
 - [직접 따라하며 git 브랜치 배우기](http://learnbranch.urigit.com/)
 - [Git 실습교육](http://www.slideshare.net/flyskykr/github-46014813)
@@ -20,10 +23,6 @@ $ [sudo] npm i -g npm webpack babel-core
 ```
 
 - [yarn](https://yarnpkg.com/)
-
-```bash
-$ [sudo] npm i -g yarn
-```
 
 
 ## 3. package.json
