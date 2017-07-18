@@ -2,6 +2,7 @@
 
 ## 1. git
 
+- [git 설치](https://git-scm.com/)
 - [(gui) sourceTree 설치](https://www.sourcetreeapp.com/)
 - [git 간편안내서](https://rogerdudler.github.io/git-guide/index.ko.html)
 - [직접 따라하며 git 브랜치 배우기](http://learnbranch.urigit.com/)
